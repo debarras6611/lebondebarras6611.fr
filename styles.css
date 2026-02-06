@@ -1,0 +1,138 @@
+:root{
+  --bg:#0b1220;
+  --bg2:#0f1a33;
+  --card:#ffffff;
+  --muted:#64748b;
+  --text:#0b1220;
+  --accent:#ff6a00;
+  --accent2:#2dd4bf;
+  --line:#e5e7eb;
+}
+
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--text);background:#f5f7fb}
+a{color:inherit}
+.wrap{max-width:1100px;margin:0 auto;padding:0 18px}
+
+.hero{
+  background: radial-gradient(1200px 700px at 20% -10%, #1d2a52 0%, var(--bg) 55%, #050914 100%);
+  color:#fff;
+  padding:38px 0 26px;
+}
+.brand{display:flex;gap:14px;align-items:center;justify-content:center;margin-bottom:10px;flex-wrap:wrap}
+.logo{
+  width:56px;height:56px;border-radius:14px;
+  display:grid;place-items:center;
+  background:rgba(255,255,255,.12);
+  border:1px solid rgba(255,255,255,.18);
+  font-weight:800;letter-spacing:.5px
+}
+h1{margin:0;font-size:32px;line-height:1.1}
+h1 span{font-weight:700;color:rgba(255,255,255,.86)}
+.subtitle{margin:6px 0 0;color:rgba(255,255,255,.82)}
+.hero-cta{margin:18px auto 10px;display:flex;flex-direction:column;gap:10px;align-items:center}
+.small{font-size:13px;margin:0}
+.tiny{font-size:12px;margin:0}
+.dim{color:var(--muted)}
+.center{text-align:center}
+
+.badges{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:18px}
+.badge{
+  padding:8px 10px;border-radius:999px;
+  background:rgba(255,255,255,.10);
+  border:1px solid rgba(255,255,255,.16);
+  font-size:13px
+}
+
+.section{padding:46px 0}
+.section.alt{background:#eef2ff}
+
+.grid{display:grid;grid-template-columns:1.15fr .85fr;gap:18px;align-items:start}
+@media (max-width: 900px){
+  .grid{grid-template-columns:1fr}
+  h1{font-size:28px}
+}
+
+h2{margin:0 0 12px;font-size:26px}
+p{margin:0 0 12px;color:#0f172a}
+ul{margin:0;padding-left:18px}
+.checklist{list-style:none;padding:0;margin:14px 0 0}
+.checklist li{position:relative;padding-left:24px;margin:10px 0;color:#0f172a}
+.checklist li::before{content:"✔";position:absolute;left:0;top:0;color:var(--accent2);font-weight:800}
+
+.card{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:14px;
+  padding:18px;
+  box-shadow: 0 12px 30px rgba(2,6,23,.06);
+}
+.cards{display:grid;grid-template-columns:1fr;gap:10px;margin-top:12px}
+.mini{
+  border:1px solid var(--line);
+  border-radius:12px;
+  padding:12px;
+  background:#fbfdff;
+}
+.mini h4{margin:0 0 6px}
+.mini p{margin:0;color:#334155}
+
+.callout{
+  margin-top:16px;
+  border-radius:14px;
+  padding:14px;
+  background:rgba(255,106,0,.08);
+  border:1px dashed rgba(255,106,0,.5);
+}
+.callout strong{display:block;margin-bottom:6px}
+.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-top:10px}
+
+.cta{
+  display:inline-flex;align-items:center;justify-content:center;
+  gap:8px;
+  padding:12px 16px;
+  border-radius:10px;
+  text-decoration:none;
+  font-weight:800;
+  border:1px solid transparent;
+}
+.cta.primary{background:var(--accent);color:#fff}
+.cta.secondary{background:transparent;color:#fff;border-color:rgba(255,255,255,.28)}
+.section .cta.secondary{color:var(--text);border-color:var(--line);background:#fff}
+.cta.full{width:100%}
+
+.zones{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin-top:14px}
+@media (max-width: 900px){.zones{grid-template-columns:1fr}}
+.zone{
+  background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px
+}
+.zone h3{margin:0 0 6px}
+.zone p{margin:0 0 10px;color:#334155}
+.zone ul{margin:0;padding-left:18px;color:#334155}
+.zone.info{background:linear-gradient(180deg,#ffffff 0%, #f8fafc 100%)}
+
+.form{display:grid;gap:12px;margin-top:10px}
+label{display:grid;gap:6px;font-weight:700;color:#0f172a}
+input,select,textarea{
+  width:100%;
+  padding:12px 12px;
+  border-radius:10px;
+  border:1px solid var(--line);
+  font:inherit;
+  background:#fff;
+}
+textarea{resize:vertical}
+.separator{height:1px;background:var(--line);margin:14px 0}
+
+.faq details{
+  background:#fff;border:1px solid var(--line);border-radius:12px;
+  padding:12px;margin:10px 0
+}
+.faq summary{cursor:pointer;font-weight:800}
+.faq p{margin:10px 0 0;color:#334155}
+
+.footer{background:#0b1220;color:#fff;padding:22px 0}
+.footer-grid{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;align-items:center}
+.footer-links{display:flex;gap:12px;flex-wrap:wrap}
+.footer a{color:#fff;text-decoration:none;opacity:.9}
+.footer a:hover{opacity:1;text-decoration:underline}
